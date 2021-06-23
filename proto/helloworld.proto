@@ -1,9 +1,15 @@
 syntax = "proto3";
 
-package proto;
+option go_package = "proto/";
+option java_multiple_files = true;
+option java_package = "com.moonspirit.turtorial.grpc";
+option java_outer_classname = "HelloWorldProto";
+
+package helloworld;
 
 // The greeting service definition.
 service Greeter {
+  // Sends a greeting
   rpc SayHello (HelloRequest) returns (HelloReply) {}
 }
 
